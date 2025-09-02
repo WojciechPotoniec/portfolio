@@ -12,9 +12,9 @@ function App() {
     <>
       <Iridescence
         className="fixed inset-0 -z-10"
-        color2={darkColor}
-        color1={lightColor}
-        speed={0.7}
+        color1={darkColor}
+        color2={lightColor}
+        speed={1.0}
       />
       <div className="flex text-white">
         <div className="w-2/5 h-screen sticky top-0">
