@@ -1,6 +1,10 @@
 import Iridescence from "./Iridescence";
+import Header from "./components/Header";
+import NavMenu from "./components/NavMenu";
+import MainContent from "./components/MainContent";
+import Footer from "./components/Footer";
 
-const darkColor = [0.058, 0.125, 0.153];  // #0F2027
+const darkColor = [0.058, 0.125, 0.153]; // #0F2027
 const lightColor = [0.172, 0.325, 0.392]; // #2c5364
 
 function App() {
@@ -10,28 +14,19 @@ function App() {
         className="fixed inset-0 -z-10"
         color2={darkColor}
         color1={lightColor}
-        speed={0.5}
+        speed={0.7}
       />
-      <div className="min-h-screen flex flex-col text-white">
-        <header className="h-[100px] px-8 flex items-center justify-between">
-          <span>Wojciech Potoniec</span>
-          <nav>Menu</nav>
-        </header>
+      <div className="flex text-white">
+        <div className="w-2/5 h-screen sticky top-0">
+          <Header />
+          <NavMenu />
+        </div>
 
-        <main className="flex-grow flex justify-center p-8">
-          <div className="w-full max-w-[1200px] text-center">
-            <h1>main</h1>
-            <p>
-              Questo contenuto avrà una larghezza massima di 1200px e sarà
-              centrato.
-            </p>
-          </div>
-        </main>
-
-        <footer className="min-h-[100px] flex items-center justify-center">
-          <p>© 2025 wojtekhub.it</p>
-        </footer>
+        <div className="w-3/5 flex items-center">
+          <MainContent />
+        </div>
       </div>
+      {/* <Footer/> */}
     </>
   );
 }
