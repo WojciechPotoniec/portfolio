@@ -6,8 +6,8 @@ const mainMenuItems = [
 
 export default function NavMenu() {
   return (
-    <nav>
-      <ul className="flex flex-col gap-y-4">
+    <nav className="p-14 flex">
+      <ul className="flex flex-col gap-y-3">
         {mainMenuItems.map((item) => (
           <li key={item.name} className="text-xl tracking-widest">
             <a
