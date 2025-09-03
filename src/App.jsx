@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import Iridescence from "./Iridescence";
 import Header from "./components/Header";
 import NavMenu from "./components/NavMenu";
@@ -8,6 +10,7 @@ const darkColor = [0.058, 0.125, 0.153]; // #0F2027
 const lightColor = [0.172, 0.325, 0.392]; // #2c5364
 
 function App() {
+  const [activeView, setActiveView] = useState('home');
   return (
     <>
       <Iridescence
@@ -19,11 +22,11 @@ function App() {
       <div className="flex text-white">
         <div className="w-2/5 h-screen sticky top-0">
           <Header />
-          <NavMenu />
+          <NavMenu setActiveView={setActiveView} activeView={activeView} />
         </div>
 
         <div className="w-3/5 flex items-center">
-          <MainContent />
+          <MainContent  activeView={activeView} />
         </div>
       </div>
       {/* <Footer/> */}
