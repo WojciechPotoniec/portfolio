@@ -1,4 +1,5 @@
-// tailwind.config.js
+const plugin = require('tailwindcss/plugin'); 
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -7,24 +8,35 @@ export default {
   ],
   theme: {
     extend: {
-      // 1. Definiamo i fotogrammi chiave (keyframes) dell'animazione
       keyframes: {
         'fade-in-up': {
-          '0%': {
-            opacity: '0',
-            transform: 'translateY(20px)'
-          },
-          '100%': {
-            opacity: '1',
-            transform: 'translateY(0)'
-          },
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
         },
       },
-      // 2. Registriamo la nostra animazione per poterla usare come classe
       animation: {
         'fade-in-up': 'fade-in-up 0.7s ease-out forwards',
       },
+      boxShadow: {
+        'glow': '0 0 15px 0px rgba(255, 255, 255, 0.4)',
+      },
+      textShadow: {
+        'glow': '0 0 5px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4)',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide'),
+
+    plugin(function({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          'text-shadow': (value) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme('textShadow') }
+      )
+    }),
+  ],
 }
