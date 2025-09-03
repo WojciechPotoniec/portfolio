@@ -17,13 +17,23 @@ export default function Header() {
         </div>
         <div className="absolute left-2/3 bottom-0">
           <ul className="flex gap-8 tracking-widest text-xl">
-            <li className="flex items-center gap-x-2 relative pb-1 text-white after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full cursor-pointer">
+            <li className=" flex items-center gap-x-2 cursor-pointer rounded-lg px-3 py-2 transition-shadow duration-300 hover:shadow-glow">
               <FaGithub size={30} />
-              <a href="https://github.com/WojciechPotoniec">GitHub</a>
+              <a
+                href="https://github.com/WojciechPotoniec"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
             </li>
-            <li className="flex gap-x-2 relative pb-1 text-white after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full cursor-pointer">
+            <li className="flex items-center gap-x-2 cursor-pointer rounded-lg px-3 py-2 transition-shadow duration-300 hover:shadow-glow">
               <FaLinkedin size={30} />
-              <a href="https://www.linkedin.com/in/wojciechpotoniec/">
+              <a
+                href="https://www.linkedin.com/in/wojciechpotoniec/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Linkedin
               </a>
             </li>
