@@ -1,7 +1,7 @@
 const mainMenuItems = [
-  { id: "home", name: "About Me", href: "#home" },
-  { id: "projects", name: "Projects", href: "#projects" },
-  { id: "contact", name: "Get In Touch", href: "#contact" },
+  { id: "home", name: "Su di me", href: "#home" },
+  { id: "projects", name: "Progetti", href: "#projects" },
+  { id: "contact", name: "Contattami", href: "#contact" },
 ];
 
 export default function NavMenu({ setActiveView, activeView }) {
