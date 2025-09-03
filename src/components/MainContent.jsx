@@ -1,11 +1,6 @@
 import AboutMe from "./AboutMe";
 import Projects from "./Projects";
-
-const Contact = () => (
-    <div className="animate-fade-in-up">
-        <h1 className="text-4xl font-bold tracking-widest uppercase">Contattami</h1>
-    </div>
-);
+import GetInTouch from "./GetInTouch";
 
 export default function MainContent({ activeView }) {
   const renderContent = () => {
@@ -15,7 +10,7 @@ export default function MainContent({ activeView }) {
       case 'projects':
         return <Projects />;
       case 'contact':
-        return <Contact />;
+        return <GetInTouch />;
       default:
         return <AboutMe />;
     }
