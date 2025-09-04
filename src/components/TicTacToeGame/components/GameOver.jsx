@@ -1,7 +1,7 @@
 export default function GameOver({ winner, onRestart }) {
   return (
     <div 
-      className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center animate-pop-in"
+      className="space-y-6 absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center animate-pop-in"
       style={{backgroundColor: 'rgba(40, 38, 23, 0.95)'}}
     >
       <h2 className="font-caprasimo text-6xl text-center text-tic-tac-gameover-title mb-0">
