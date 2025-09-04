@@ -14,7 +14,7 @@ function App() {
   const [activeView, setActiveView] = useState('projects');
   
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Iridescence
         className="fixed inset-0 -z-10"
         color1={darkColor}
@@ -27,7 +27,7 @@ function App() {
         <Route 
           path="/" 
           element={
-            <div className="lg:flex text-white animate-fade-in-up">
+            <div className="lg:flex text-white animate-fade-in-up min-h-screen">
               <div className="lg:w-2/5 lg:h-screen lg:sticky top-0">
                 <Header />
                 <NavMenu setActiveView={setActiveView} activeView={activeView} />
@@ -45,7 +45,7 @@ function App() {
           element={<ProjectDetail />} 
         />
       </Routes>
-    </>
+    </div>
   );
 }
 
