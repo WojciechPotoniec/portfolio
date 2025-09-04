@@ -122,7 +122,6 @@ export default function Iridescence({ color1 = [1, 1, 1], color2 = [1, 1, 1], sp
       ctn.removeChild(gl.canvas);
       gl.getExtension('WEBGL_lose_context')?.loseContext();
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [color1, color2, speed, amplitude, mouseReact]);
 
   return <div ref={ctnDom} className="w-full h-full" {...rest} />;
