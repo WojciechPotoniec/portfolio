@@ -21,9 +21,10 @@ export default function useIntersectionObserver(options) {
     }
 
     // Funzione di pulizia per disconnettere l'observer
+    const element = elementRef.current;
     return () => {
-      if (elementRef.current) {
-        observer.unobserve(elementRef.current);
+      if (element) {
+        observer.unobserve(element);
       }
     };
   }, [options]);
