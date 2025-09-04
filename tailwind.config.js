@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 const plugin = require('tailwindcss/plugin'); 
 
 /** @type {import('tailwindcss').Config} */
@@ -29,8 +30,57 @@ export default {
         }
       },
       fontFamily: {
+        // === FONT ORIGINALI (ATTUALMENTE ATTIVI) ===
         'caprasimo': ['Caprasimo', 'cursive'],
         'roboto-slab': ['Roboto Slab', 'serif'],
+
+        // === OPZIONE 1: INTER + JETBRAINS MONO (RACCOMANDATO) ===
+        // Uncomment le righe sotto e commenta quelle sopra per usare Inter
+        // 'sans': ['Inter', 'system-ui', 'sans-serif'],
+        // 'mono': ['JetBrains Mono', 'Consolas', 'monospace'],
+        // 'display': ['Inter', 'system-ui', 'sans-serif'], // Per titoli grandi
+
+        // === OPZIONE 2: POPPINS + FIRA CODE (FRIENDLY & MODERNO) ===
+        // Uncomment le righe sotto per usare Poppins
+        // 'sans': ['Poppins', 'system-ui', 'sans-serif'],
+        // 'mono': ['Fira Code', 'Consolas', 'monospace'],
+        // 'display': ['Poppins', 'system-ui', 'sans-serif'], // Per titoli
+
+        // === OPZIONE 3: DM SANS + SPACE MONO (CLEAN & PROFESSIONALE) ===
+        // Uncomment le righe sotto per usare DM Sans
+        // 'sans': ['DM Sans', 'system-ui', 'sans-serif'],
+        // 'mono': ['Space Mono', 'Consolas', 'monospace'],
+        // 'display': ['DM Sans', 'system-ui', 'sans-serif'], // Per titoli
+
+        // === MAPPING PER UTILIZZO EASY ===
+        // Uncomment le righe sotto per attivare i font mappati
+        // 'heading': ['system-ui', 'sans-serif'],     // Per H1, H2, H3 
+        // 'body': ['system-ui', 'sans-serif'],        // Per paragrafi 
+        // 'nav': ['system-ui', 'sans-serif'],         // Per navigazione 
+        // 'code': ['ui-monospace', 'monospace'],      // Per codice/tech 
+        // 'display': ['system-ui', 'sans-serif'],     // Per titoli grandi
+
+        // === VERSIONI ATTIVE CON I FONT ===
+        // Per Inter: Decommenta e sostituisci le righe sopra
+        'heading': ['Inter', 'system-ui', 'sans-serif'],
+        'body': ['Inter', 'system-ui', 'sans-serif'],
+        'nav': ['Inter', 'system-ui', 'sans-serif'], 
+        'code': ['JetBrains Mono', 'Consolas', 'monospace'],
+        'display': ['Inter', 'system-ui', 'sans-serif'],
+
+        // Per Poppins: Decommenta e sostituisci le righe sopra
+        // 'heading': ['Poppins', 'system-ui', 'sans-serif'],
+        // 'body': ['Poppins', 'system-ui', 'sans-serif'],
+        // 'nav': ['Poppins', 'system-ui', 'sans-serif'],
+        // 'code': ['Fira Code', 'Consolas', 'monospace'],
+        // 'display': ['Poppins', 'system-ui', 'sans-serif'],
+
+        // Per DM Sans: Decommenta e sostituisci le righe sopra  
+        // 'heading': ['DM Sans', 'system-ui', 'sans-serif'],
+        // 'body': ['DM Sans', 'system-ui', 'sans-serif'],
+        // 'nav': ['DM Sans', 'system-ui', 'sans-serif'],
+        // 'code': ['Space Mono', 'Consolas', 'monospace'],
+        // 'display': ['DM Sans', 'system-ui', 'sans-serif'],
       },
       backgroundImage: {
         'tic-tac-pattern': "radial-gradient(circle at top, rgba(241, 210, 70, 0.98), rgba(250, 176, 103, 0.87)), url('/bg-pattern-dark.png')",
@@ -86,6 +136,7 @@ export default {
     },
   },
   plugins: [
+    // eslint-disable-next-line no-undef
     require('tailwind-scrollbar-hide'),
 
     plugin(function({ matchUtilities, theme }) {
