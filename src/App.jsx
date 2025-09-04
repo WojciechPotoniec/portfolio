@@ -11,7 +11,7 @@ const darkColor = [0.058, 0.125, 0.153]; // #0F2027
 const lightColor = [0.172, 0.325, 0.392]; // #2c5364
 
 function App() {
-  const [activeView, setActiveView] = useState('home');
+  const [activeView, setActiveView] = useState('projects');
   
   return (
     <>
@@ -27,7 +27,7 @@ function App() {
         <Route 
           path="/" 
           element={
-            <div className="flex text-white">
+            <div className="flex text-white animate-fade-in-up">
               <div className="w-2/5 h-screen sticky top-0">
                 <Header />
                 <NavMenu setActiveView={setActiveView} activeView={activeView} />

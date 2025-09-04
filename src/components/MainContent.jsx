@@ -5,14 +5,14 @@ import GetInTouch from "./GetInTouch";
 export default function MainContent({ activeView }) {
   const renderContent = () => {
     switch (activeView) {
-      case 'home':
-        return <AboutMe />;
       case 'projects':
         return <Projects />;
+      case 'aboutme':
+        return <AboutMe />;
       case 'contact':
         return <GetInTouch />;
       default:
-        return <AboutMe />;
+        return <Projects />;
     }
   };
 
