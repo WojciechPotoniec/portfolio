@@ -27,12 +27,12 @@ function App() {
         <Route 
           path="/" 
           element={
-            <div className="flex text-white animate-fade-in-up">
-              <div className="w-2/5 h-screen sticky top-0">
+            <div className="lg:flex text-white animate-fade-in-up">
+              <div className="lg:w-2/5 lg:h-screen lg:sticky top-0">
                 <Header />
                 <NavMenu setActiveView={setActiveView} activeView={activeView} />
               </div>
-              <div className="w-3/5 flex items-center">
+              <div className="lg:w-3/5 lg:flex items-center">
                 <MainContent activeView={activeView} />
               </div>
             </div>

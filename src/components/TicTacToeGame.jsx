@@ -79,27 +79,27 @@ export default function TicTacToeGame() {
 
   return (
     <div className="min-h-screen bg-tic-tac-pattern bg-repeat" style={{backgroundSize: '100% 100%, 30% 30%, 100% 100%'}}>
-      <div className="text-center pt-12">
+      <div className="text-center pt-6 sm:pt-8 lg:pt-12 px-4">
         {/* Game Logo */}
         <img
           src="/game-logo.png"
           alt="Game Logo"
-          className="w-32 h-32 mx-auto mb-4 drop-shadow-lg"
+          className="w-20 h-20 sm:w-24 sm:h-24 lg:w-32 lg:h-32 mx-auto mb-3 sm:mb-4 drop-shadow-lg"
         />
         
         {/* Title */}
-        <h1 className="font-caprasimo text-5xl text-tic-tac-title mb-12 text-shadow-tic-tac-title">
+        <h1 className="font-caprasimo text-3xl sm:text-4xl lg:text-5xl text-tic-tac-title mb-6 sm:mb-8 lg:mb-12 text-shadow-tic-tac-title">
           Tic-Tac-Toe
         </h1>
       </div>
       
-      <main className="pb-12">
+      <main className="pb-6 sm:pb-8 lg:pb-12 px-4">
         {/* Game Container */}
         <div 
-          className="max-w-3xl mx-auto mt-12 p-8 rounded-md shadow-tic-tac-container relative"
+          className="max-w-3xl mx-auto mt-6 sm:mt-8 lg:mt-12 p-4 sm:p-6 lg:p-8 rounded-md shadow-tic-tac-container relative"
           style={{background: 'linear-gradient(#383624, #282617)'}}
         >
-          <ol className="list-none p-0 my-4 flex justify-center items-center gap-8 mb-6">
+          <ol className="list-none p-0 my-2 sm:my-4 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 lg:gap-8 mb-4 sm:mb-6">
             <Player
               initialName="Player 1"
               symbol="X"

@@ -67,25 +67,27 @@ export default function ProjectDetail() {
     <div className="min-h-screen text-white">
       {/* Header con navigazione */}
       <header className="sticky top-0 z-50 bg-black/20 backdrop-blur-sm border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
           <button
             onClick={() => navigate('/')}
             className="flex items-center gap-2 text-white/80 hover:text-white transition-colors duration-300"
           >
-            <FaArrowLeft size={20} />
-            Portfolio
+            <FaArrowLeft size={16} className="sm:hidden" />
+            <FaArrowLeft size={20} className="hidden sm:block" />
+            <span className="hidden sm:inline">Portfolio</span>
           </button>
           
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 sm:gap-4">
             {project.githubUrl && (
               <a
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-white/80 hover:text-white transition-colors duration-300"
+                className="flex items-center gap-1 sm:gap-2 text-white/80 hover:text-white transition-colors duration-300"
               >
-                <FaGithub size={20} />
-                Codice
+                <FaGithub size={16} className="sm:hidden" />
+                <FaGithub size={20} className="hidden sm:block" />
+                <span className="hidden sm:inline">Codice</span>
               </a>
             )}
             {project.liveUrl && (
@@ -93,37 +95,38 @@ export default function ProjectDetail() {
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-white/80 hover:text-white transition-colors duration-300"
+                className="flex items-center gap-1 sm:gap-2 text-white/80 hover:text-white transition-colors duration-300"
               >
-                <FaExternalLinkAlt size={20} />
-                Live Demo
+                <FaExternalLinkAlt size={16} className="sm:hidden" />
+                <FaExternalLinkAlt size={20} className="hidden sm:block" />
+                <span className="hidden sm:inline">Live Demo</span>
               </a>
             )}
           </div>
         </div>
       </header>
 
-      <div className="max-w-7xl mx-auto px-6 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-12">
         {/* Informazioni progetto */}
-        <div className="mb-12">
-          <div className="flex items-center gap-4 mb-6">
-            <h1 className="font-display text-5xl font-bold">{project.title}</h1>
-            <span className="px-3 py-1 bg-white/10 rounded-full text-sm">
+        <div className="mb-8 sm:mb-12">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+            <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold">{project.title}</h1>
+            <span className="px-3 py-1 bg-white/10 rounded-full text-sm self-start sm:self-center">
               {project.year}
             </span>
           </div>
           
-          <p className="font-body text-xl text-white/80 mb-8 max-w-3xl">
+          <p className="font-body text-base sm:text-lg lg:text-xl text-white/80 mb-6 sm:mb-8 max-w-3xl">
             {project.description}
           </p>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12">
             {/* Tecnologie */}
             <div>
-              <h3 className="font-heading text-lg font-semibold mb-4">Tecnologie utilizzate</h3>
+              <h3 className="font-heading text-base sm:text-lg font-semibold mb-3 sm:mb-4">Tecnologie utilizzate</h3>
               <div className="flex flex-wrap gap-2">
                 {project.technologies.map((tech, i) => (
-                  <span key={i} className="font-code px-3 py-1 bg-white/10 rounded-lg text-sm">
+                  <span key={i} className="font-code px-2.5 sm:px-3 py-1 bg-white/10 rounded-lg text-xs sm:text-sm">
                     {tech}
                   </span>
                 ))}
@@ -132,11 +135,11 @@ export default function ProjectDetail() {
 
             {/* Features */}
             <div>
-              <h3 className="font-heading text-lg font-semibold mb-4">Caratteristiche</h3>
+              <h3 className="font-heading text-base sm:text-lg font-semibold mb-3 sm:mb-4">Caratteristiche</h3>
               <ul className="space-y-2 text-white/80">
                 {project.features.map((feature, i) => (
-                  <li key={i} className="font-body flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 bg-white/60 rounded-full" />
+                  <li key={i} className="font-body flex items-center gap-2 text-sm sm:text-base">
+                    <span className="w-1.5 h-1.5 bg-white/60 rounded-full flex-shrink-0" />
                     {feature}
                   </li>
                 ))}
@@ -147,16 +150,16 @@ export default function ProjectDetail() {
 
         {/* Componente del progetto */}
         {ProjectComponent ? (
-          <div className="bg-white/5 rounded-xl p-8 backdrop-blur-sm">
-            <h2 className="text-2xl font-bold mb-6 text-center">
+          <div className="bg-white/5 rounded-xl p-4 sm:p-6 lg:p-8 backdrop-blur-sm">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4 sm:mb-6 text-center">
               Prova il progetto
             </h2>
             <ProjectComponent />
           </div>
         ) : (
-          <div className="bg-white/5 rounded-xl p-12 text-center">
-            <h3 className="text-xl font-semibold mb-4">Demo non disponibile</h3>
-            <p className="text-white/80 mb-6">
+          <div className="bg-white/5 rounded-xl p-6 sm:p-8 lg:p-12 text-center">
+            <h3 className="text-lg sm:text-xl font-semibold mb-4">Demo non disponibile</h3>
+            <p className="text-white/80 mb-6 text-sm sm:text-base">
               Questo progetto è disponibile tramite link esterno
             </p>
             {project.liveUrl && (
@@ -164,9 +167,10 @@ export default function ProjectDetail() {
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 px-6 py-3 rounded-lg transition-colors duration-300"
+                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-colors duration-300 text-sm sm:text-base"
               >
-                <FaExternalLinkAlt size={20} />
+                <FaExternalLinkAlt size={16} className="sm:hidden" />
+                <FaExternalLinkAlt size={20} className="hidden sm:block" />
                 Visita il progetto
               </a>
             )}

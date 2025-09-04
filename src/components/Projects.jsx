@@ -58,8 +58,8 @@ export default function Projects() {
         Progetti
       </h1>
 
-      <div className="flex gap-x-10">
-        <div className="w-1/2">
+      <div className="lg:flex lg:gap-x-10">
+        <div className="hidden lg:block lg:w-1/2">
           <div className="sticky top-20 h-[70vh] rounded-lg overflow-hidden bg-black/20 flex items-center justify-center">
             <img
               key={activeImage}
@@ -70,8 +70,8 @@ export default function Projects() {
           </div>
         </div>
 
-        <div className="w-1/2">
-          <div className="space-y-12 max-h-[70vh] overflow-y-auto scrollbar-hide pr-4">
+        <div className="w-full lg:w-1/2">
+          <div className="space-y-6 lg:space-y-12 lg:max-h-[70vh] lg:overflow-y-auto lg:scrollbar-hide lg:pr-4">
             {projectData.map((project, index) => (
               <ProjectCard
                 key={project.id}
