@@ -8,7 +8,13 @@
       "Read(/C:\\GitHubProjects\\portfolio\\src\\components\\TicTacToeGame\\components/**)",
       "Read(/C:\\GitHubProjects\\portfolio\\src\\components\\TicTacToeGame\\components/**)",
       "Read(/C:\\GitHubProjects\\portfolio\\src\\components\\TicTacToeGame\\components/**)",
-      "Read(/C:\\GitHubProjects\\portfolio\\src/**)"
+      "Read(/C:\\GitHubProjects\\portfolio\\src/**)",
+      "Read(/C:\\GitHubProjects\\portfolio/**)",
+      "Read(/C:\\GitHubProjects\\portfolio/**)",
+      "Read(/C:\\GitHubProjects\\portfolio/**)",
+      "Read(/C:\\GitHubProjects\\portfolio/**)",
+      "Read(/C:\\GitHubProjects\\portfolio\\src\\components\\TicTacToeGame\\components/**)",
+      "Bash(npm run build:*)"
     ],
     "deny": [],
     "ask": []
