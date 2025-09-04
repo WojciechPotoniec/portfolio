@@ -15,44 +15,57 @@ export default function Projects() {
       technologies: ["React", "JavaScript", "CSS"]
     },
     {
-      id: "inventory-app",
-      title: "Progetto Alpha",
-      description: "Sviluppo di un'applicazione web full-stack per la gestione di inventari.",
-      imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
-      type: "web-app",
-      technologies: ["React", "Node.js", "MongoDB"]
+      id: "coming-soon-1",
+      isComingSoon: true,
+      imageUrl: "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=2069&auto=format&fit=crop"
     },
     {
-      id: "ecommerce",
-      title: "Progetto Beta",
-      description: "Creazione di un sito e-commerce con React e Node.js.",
-      imageUrl: "https://images.unsplash.com/photo-1522199755839-a2bacb67c546?q=80&w=2072&auto=format&fit=crop",
-      type: "web-app",
-      technologies: ["React", "Node.js", "Stripe"]
+      id: "coming-soon-2", 
+      isComingSoon: true,
+      imageUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop"
     },
-    // ... altri progetti
+    // Progetti commentati per il futuro
+    // {
+    //   id: "inventory-app",
+    //   title: "Progetto Alpha",
+    //   description: "Sviluppo di un'applicazione web full-stack per la gestione di inventari.",
+    //   imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+    //   type: "web-app",
+    //   technologies: ["React", "Node.js", "MongoDB"]
+    // },
+    // {
+    //   id: "ecommerce",
+    //   title: "Progetto Beta", 
+    //   description: "Creazione di un sito e-commerce con React e Node.js.",
+    //   imageUrl: "https://images.unsplash.com/photo-1522199755839-a2bacb67c546?q=80&w=2072&auto=format&fit=crop",
+    //   type: "web-app",
+    //   technologies: ["React", "Node.js", "Stripe"]
+    // },
   ];
 
   const [activeImage, setActiveImage] = useState(projectData[0].imageUrl);
 
   const handleProjectClick = (projectId) => {
-    navigate(`/project/${projectId}`);
+    // Solo per progetti reali, non per le card "coming soon"
+    if (!projectId.includes('coming-soon')) {
+      navigate(`/project/${projectId}`);
+    }
   };
 
   return (
     <div className="w-full animate-fade-in-up">
-      <h1 className="text-4xl font-bold tracking-widest mb-8 text-center uppercase">
+      <h1 className="font-heading text-4xl font-bold tracking-widest mb-8 text-center uppercase">
         Progetti
       </h1>
 
       <div className="flex gap-x-10">
         <div className="w-1/2">
-          <div className="sticky top-20 h-[70vh] rounded-lg overflow-hidden">
+          <div className="sticky top-20 h-[70vh] rounded-lg overflow-hidden bg-black/20 flex items-center justify-center">
             <img
               key={activeImage}
               src={activeImage}
               alt="Anteprima del progetto"
-              className="w-full h-full object-cover animate-fade-in-up"
+              className="max-w-full max-h-full object-contain animate-fade-in-up"
             />
           </div>
         </div>
