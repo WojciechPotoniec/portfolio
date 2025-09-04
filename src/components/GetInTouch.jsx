@@ -19,10 +19,10 @@ export default function GetInTouch() {
 
   return (
     <div className="w-full max-w-lg mx-auto animate-fade-in-up">
-      <h1 className="text-4xl font-bold tracking-widest mb-8 text-center uppercase">
+      <h1 className="font-heading text-4xl font-bold tracking-widest mb-8 text-center uppercase">
         Contattami
       </h1>
-      <p className="text-center text-gray-300 mb-10">
+      <p className="font-body text-center text-gray-300 mb-10">
         Hai un'idea o un progetto in mente? Scrivimi!
       </p>
 
@@ -31,7 +31,7 @@ export default function GetInTouch() {
         <div className="flex flex-col">
           <label
             htmlFor="name"
-            className="mb-2 text-sm tracking-widest text-gray-400"
+            className="font-body mb-2 text-sm tracking-widest text-gray-400"
           >
             Nome
           </label>
@@ -41,7 +41,7 @@ export default function GetInTouch() {
             name="name"
             required
             // 1. Classi condizionali per il bordo rosso
-            className={`bg-white/10 p-3 rounded-md border transition-all duration-300 w-full focus:outline-none focus:ring-2 
+            className={`font-body bg-white/10 p-3 rounded-md border transition-all duration-300 w-full focus:outline-none focus:ring-2 
               ${hasError('name') 
                 ? 'border-red-500 focus:ring-red-500' 
                 : 'border-transparent focus:ring-white/50'
@@ -62,7 +62,7 @@ export default function GetInTouch() {
         <div className="flex flex-col">
           <label
             htmlFor="email"
-            className="mb-2 text-sm tracking-widest text-gray-400"
+            className="font-body mb-2 text-sm tracking-widest text-gray-400"
           >
             Email
           </label>
@@ -72,7 +72,7 @@ export default function GetInTouch() {
             name="email"
             required
             // 1. Classi condizionali per il bordo rosso
-            className={`bg-white/10 p-3 rounded-md border transition-all duration-300 w-full focus:outline-none focus:ring-2 
+            className={`font-body bg-white/10 p-3 rounded-md border transition-all duration-300 w-full focus:outline-none focus:ring-2 
               ${hasError('email') 
                 ? 'border-red-500 focus:ring-red-500' 
                 : 'border-transparent focus:ring-white/50'
@@ -93,7 +93,7 @@ export default function GetInTouch() {
         <div className="flex flex-col">
           <label
             htmlFor="message"
-            className="mb-2 text-sm tracking-widest text-gray-400"
+            className="font-body mb-2 text-sm tracking-widest text-gray-400"
           >
             Messaggio
           </label>
@@ -103,7 +103,7 @@ export default function GetInTouch() {
             rows="5"
             required
             // 1. Classi condizionali per il bordo rosso
-            className={`bg-white/10 p-3 rounded-md border transition-all duration-300 resize-none w-full focus:outline-none focus:ring-2 
+            className={`font-body bg-white/10 p-3 rounded-md border transition-all duration-300 resize-none w-full focus:outline-none focus:ring-2 
               ${hasError('message') 
                 ? 'border-red-500 focus:ring-red-500' 
                 : 'border-transparent focus:ring-white/50'
@@ -125,7 +125,7 @@ export default function GetInTouch() {
           <button
             type="submit"
             disabled={state.submitting}
-            className="w-full bg-white/90 text-black font-bold py-3 rounded-md tracking-widest uppercase hover:bg-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white disabled:opacity-50 disabled:cursor-not-allowed"
+            className="font-nav w-full bg-white/90 text-black font-bold py-3 rounded-md tracking-widest uppercase hover:bg-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {state.submitting ? 'Invio in corso...' : 'Invia Messaggio'}
           </button>

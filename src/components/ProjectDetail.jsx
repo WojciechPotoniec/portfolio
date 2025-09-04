@@ -107,23 +107,23 @@ export default function ProjectDetail() {
         {/* Informazioni progetto */}
         <div className="mb-12">
           <div className="flex items-center gap-4 mb-6">
-            <h1 className="text-5xl font-bold">{project.title}</h1>
+            <h1 className="font-display text-5xl font-bold">{project.title}</h1>
             <span className="px-3 py-1 bg-white/10 rounded-full text-sm">
               {project.year}
             </span>
           </div>
           
-          <p className="text-xl text-white/80 mb-8 max-w-3xl">
+          <p className="font-body text-xl text-white/80 mb-8 max-w-3xl">
             {project.description}
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {/* Tecnologie */}
             <div>
-              <h3 className="text-lg font-semibold mb-4">Tecnologie utilizzate</h3>
+              <h3 className="font-heading text-lg font-semibold mb-4">Tecnologie utilizzate</h3>
               <div className="flex flex-wrap gap-2">
                 {project.technologies.map((tech, i) => (
-                  <span key={i} className="px-3 py-1 bg-white/10 rounded-lg text-sm">
+                  <span key={i} className="font-code px-3 py-1 bg-white/10 rounded-lg text-sm">
                     {tech}
                   </span>
                 ))}
@@ -132,10 +132,10 @@ export default function ProjectDetail() {
 
             {/* Features */}
             <div>
-              <h3 className="text-lg font-semibold mb-4">Caratteristiche</h3>
+              <h3 className="font-heading text-lg font-semibold mb-4">Caratteristiche</h3>
               <ul className="space-y-2 text-white/80">
                 {project.features.map((feature, i) => (
-                  <li key={i} className="flex items-center gap-2">
+                  <li key={i} className="font-body flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-white/60 rounded-full" />
                     {feature}
                   </li>
