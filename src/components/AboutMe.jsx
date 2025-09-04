@@ -1,24 +1,26 @@
 export default function AboutMe() {
   return (
-    <div className="text-left animate-fade-in-up">
-      <h1 className="text-4xl font-bold tracking-widest mb-4 uppercase">
+    <div className="relative text-left rounded-lg overflow-hidden bg-black/20 p-8 animate-fade-in-up">
+      <h1 className="font-heading text-4xl font-bold tracking-widest mb-4 uppercase">
         Su di me
       </h1>
-      <p className="text-lg leading-relaxed">
-        Ciao ho 30 anni e sono fortemente appasionato di tecnologia in
-        generale, vivo a Benevento nella regione Campania ormai da piú di 20
-        anni, sono di origine polacca e ho conseguito tutti gli studi in Italia.
-        Lego facilmente all'interno di un gruppo e mi piace avere sempre un
-        confronto stimolante, che mi aiuta a trovare soluzioni alternative
-        accrescendo le mie skill di problem solving.
+      <p className="font-body text-lg leading-relaxed">
+        Sin da quando ero bambino ho sviluppato una forte affinità con la
+        tecnologia, ed è per questo che ho scelto di percorrere la mia carriera
+        nell’ambito sviluppo web. Le esperienze lavorative maturate nel corso
+        degli anni mi hanno dato l’opportunità di incrementare le mie conoscenze
+        in diversi ambiti inerenti al mondo tech. Inoltre, ho avuto la
+        possibilità di collaborare e gestire un team di risorse e
+        interfacciandomi con più colleghi ho sviluppato grandi capacità di
+        osservazione e comunicazione. Mi definisco una persona ambiziosa che
+        cerca di dare sempre il massimo, infatti, sono fermamente convinto che
+        il confronto con chi ha più esperienza sia il miglior modo per poter
+        trarre insegnamento da ciò che si osserva.
         <br />
         <br />
-        Nel tempo libero, mi piace esplorare nuove tecnologie e contribuire
-        a progetti open-source.
-        <br />
-        <br />
-        Quando non scrivo codice, puoi trovarmi a giocare ai VideoGames
+        Quando non scrivo codice, puoi trovarmi a giocare ai VideoGames.
       </p>
+      <img className="mt-4 rounded-md" src="./IntoDeep.gif" alt="Web Game Developer" />
     </div>
   );
 }
