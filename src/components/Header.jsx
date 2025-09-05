@@ -19,26 +19,26 @@ export default function Header() {
             <p className="font-body pt-1 tracking-widest text-sm sm:text-base">Developer</p>
           </div>
           <ul className="font-nav flex justify-center sm:justify-start gap-4 sm:gap-6 tracking-widest text-lg">
-            <li className="flex items-center gap-x-2 cursor-pointer rounded-lg px-3 py-2 transition-shadow duration-300 hover:shadow-glow">
-              <FaGithub size={24} />
+            <li>
               <a
                 href="https://github.com/WojciechPotoniec"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-nav hidden sm:inline"
+                className="flex items-center gap-x-2 cursor-pointer rounded-lg px-3 py-2 transition-shadow duration-300 hover:shadow-glow"
               >
-                GitHub
+                <FaGithub size={30} />
+                <span className="font-nav hidden sm:inline">GitHub</span>
               </a>
             </li>
-            <li className="flex items-center gap-x-2 cursor-pointer rounded-lg px-3 py-2 transition-shadow duration-300 hover:shadow-glow">
-              <FaLinkedin size={24} />
+            <li>
               <a
                 href="https://www.linkedin.com/in/wojciechpotoniec/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-nav hidden sm:inline"
+                className="flex items-center gap-x-2 cursor-pointer rounded-lg px-3 py-2 transition-shadow duration-300 hover:shadow-glow"
               >
-                Linkedin
+                <FaLinkedin size={30} />
+                <span className="font-nav hidden sm:inline">Linkedin</span>
               </a>
             </li>
           </ul>
