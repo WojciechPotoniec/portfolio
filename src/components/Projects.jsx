@@ -19,11 +19,6 @@ export default function Projects() {
       isComingSoon: true,
       imageUrl: "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=2069&auto=format&fit=crop"
     },
-    {
-      id: "coming-soon-2", 
-      isComingSoon: true,
-      imageUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop"
-    },
     // Progetti commentati per il futuro
     // {
     //   id: "inventory-app",
