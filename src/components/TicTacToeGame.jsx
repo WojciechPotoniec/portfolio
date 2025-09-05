@@ -96,7 +96,7 @@ export default function TicTacToeGame() {
       <main className="pb-6 sm:pb-8 lg:pb-12 px-4">
         {/* Game Container */}
         <div 
-          className="max-w-3xl mx-auto mt-6 sm:mt-8 lg:mt-12 p-4 sm:p-6 lg:p-8 rounded-md shadow-tic-tac-container relative"
+          className="w-full mx-auto mt-6 sm:mt-8 lg:mt-12 p-4 sm:p-6 lg:p-8 rounded-md shadow-tic-tac-container relative"
           style={{background: 'linear-gradient(#383624, #282617)'}}
         >
           <ol className="list-none p-0 my-2 sm:my-4 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 lg:gap-8 mb-4 sm:mb-6">
